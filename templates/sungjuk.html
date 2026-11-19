@@ -22,8 +22,8 @@
         </form>
     </td>
     <td>
-        <form name="myForm" id="myForm" action="/sungjuk_delete" method="post"
-            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">>
+        <form name="myForm" id="myForm" action="/sungjuk_delete" method="post">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
             <input type="hidden" id='bunho'   name='bunho'  value={{ sungjuk[0] }}  size="10">
             <button type="submit">성적 삭제</button>
         </form>
