@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block explain_content %}
+<Script Language="JavaScript">
+    cnt = 2;
+    function setT(){
+        txt = document.getElementById("txt");
+        Time_id2 = setInterval("move()", 2000);
+    }
+    function move(){
+        if(cnt > 0){
+            cnt--; txt.value = cnt;
+        }
+        else{
+            clearInterval(Time_id2);
+            location.href="https://www.w3schools.com";
+        }
+    }
+    window.onload = setT;
+</script>
+<p>
+<center>
+    <h1><input type="text" id="txt" name="txt" value="2" size="2" style="font-size: 20">초후에 daum.net 으로 이동.</h1>
+</center>
+</p>
+{% endblock explain_content %}
